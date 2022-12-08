@@ -4,11 +4,7 @@ import productRouter from './routes/productRouter.js'
 
 const app = express()
 
-app.use(
-  cors({
-    origin: 'https://reactmarket-seven.vercel.app/',
-  })
-)
+app.use(cors())
 app.use('/', (req, res, next) => {
   console.log(`Request ${req.method} at ${req.url}`)
 
